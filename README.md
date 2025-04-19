@@ -21,28 +21,33 @@ A Python solution to sort packages into appropriate stacks (STANDARD, SPECIAL, R
 
 ## Installation
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/your-username/package-sorting-automation.git
    cd package-sorting-automation
 
 ## Usage
-Import the `sort` function and call it with package dimensions (in cm) and mass (in kg):
+1. Import the `sort` function and call it with package dimensions (in cm) and mass (in kg):
+
    ```python
    from sorter import sort
-
+   
    # Example 1: Standard package
    print(sort(10, 20, 30, 5))  # Output: "STANDARD"
-
+   
    # Example 2: Bulky package (volume = 1,000,000 cm³)
    print(sort(100, 100, 100, 10))  # Output: "SPECIAL"
-
+   
    # Example 3: Rejected package (bulky and heavy)
    print(sort(200, 150, 180, 25))  # Output: "REJECTED"
 
 ## Testing
-Tests are implemented using `pytest`. To run them:
+1. Tests are implemented using `pytest`. To run them, first install the required libraries:
+
    ```bash
    pip install -r requirements.txt
+
+3. Then run the `test_sorter.py`, as:
 
    ```python
    pytest test_sorter.py -v
